@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <QueryClientProvider client={queryClient}>
     <ChakraProvider>
       <App />
-    
-      <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"}/>
+ 
+         {/* <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"}/> */}
     </ChakraProvider>
     </QueryClientProvider>
   </React.StrictMode>
