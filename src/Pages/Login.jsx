@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import axios from "axios";
-
 import {
   Stack,
   InputGroup,
@@ -11,17 +10,19 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useToast } from "@chakra-ui/react";
+
+import { useNavigate, Link } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import { useEffect } from "react";
 const Login = () => {
+  const toast = useToast();
+  const [load, setLoading] = useState(false);
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
 
   const navigate = useNavigate();
-  const timer = useRef();
-  const [err, setErr] = useState(false);
   const [sign, setSign] = useState({
-  
     userName: "",
     password: "",
   });
@@ -29,32 +30,59 @@ const Login = () => {
   const handleChange = ({ target: { name, value } }) => {
     setSign({ ...sign, [name]: value });
   };
+  const loginUser = useCallback(async () => {
+    setLoading(true);
+    await axios
+      .post("http://localhost:3000/api/login", {
+        userName: sign.userName.trim(),
+        password: sign.password.trim(),
+      })
+      .then((response) => {
+        // console.log(response.data.success);
+        if (response.data.status === "ok") {
+          setSign({
+            fullName: "",
+            userName: "",
+            email: "",
+            password: "",
+          });
+          setLoading(false);
+          toast({
+            description: "Login Successfully.",
+            status: "success",
+            duration: 2000,
+            isClosable: true,
+            position: "top-right",
+          });
+          setTimeout(() => {
+            navigate("/converter");
+          }, 1500);
+        }
+      })
+      .catch((error) => {
+        // console.log(error);
+        toast({
+          title: "Authentication Error",
+          description: error.response.data.error || error.message,
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+          position: "top-right",
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [navigate, toast, sign]);
 
+  useEffect(() => {
+    if (load) {
+      loginUser();
+    }
+  }, [loginUser, load]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:8080/api/register", {
-      
-        userName: sign.userName,
-        password: sign.password,
-      })
-      .then((res) => {
-        setSign({
-          fullName: "",
-          userName: "",
-          email: "",
-          password: "",
-        });
-        setErr(false);
-        navigate("/converter");
-      })
-      .catch((err) => {
-        console.log(err);
-        setErr(true);
-        timer.current = window.setTimeout(() => {
-          setErr(false);
-        }, 4000);
-      });
+    setLoading(true);
   };
 
   return (
@@ -81,7 +109,12 @@ const Login = () => {
       >
         Convert money from one currency using Up to date FX rates
       </Text>
-      <Box width={{ base: "85vw", sm: "33vw" }} bgColor="white" margin="0 auto" rounded='md'>
+      <Box
+        width={{ base: "85vw", sm: "33vw" }}
+        bgColor="white"
+        margin="0 auto"
+        rounded="md"
+      >
         <Text
           paddingTop="2rem"
           fontSize="1.5rem"
@@ -129,10 +162,19 @@ const Login = () => {
               bgColor="pink.500"
               color="white"
               _hover={{ bgColor: "pink.400" }}
+              isLoading={load}
+              loadingText="Login"
+              variant="outline"
             >
               Submit
             </Button>
-            <Text>Dont have an Account ? <a href="/register"> <span style={{color:"blue"}} >Register Here</span></a></Text>
+
+            <Text>
+              Dont have an Account?{" "}
+              <Link to="/register">
+                <span style={{ color: "blue" }}>Register Here</span>
+              </Link>
+            </Text>
           </Stack>
         </form>
       </Box>
