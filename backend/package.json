@@ -2,11 +2,11 @@
   "name": "currency_converter",
   "version": "1.0.0",
   "description": "currency converter",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server",
-    "dev": "nodemon server.js"
+    "start": "node index",
+    "dev": "nodemon index.js"
   },
   "author": "jaymhorsh",
   "license": "ISC",
