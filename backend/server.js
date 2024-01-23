@@ -1,4 +1,3 @@
-import fs from "node:fs/promises";
 import express from "express";
 import path from "node:path";
 import bodyParser from "body-parser";
