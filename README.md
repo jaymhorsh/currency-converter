@@ -40,7 +40,7 @@ The project can be found in the following links:
 Web: [Currency-Converter](https://currency-converts.vercel.app)
 
     Demo Account:
-        username: spending
+        username: Spending
         password: Oporleti1?
 
 ## Developed By  
