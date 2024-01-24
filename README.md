@@ -47,3 +47,4 @@ Web: [Currency-Converter](https://currency-converts.vercel.app)
 
 [Jaji Moshood](https://github.com/jaymhorsh)
 
+![Contributors](https://img.shields.io/github/contributors/jaymhorsh/currency-converter?logoColor=green&style=plastic) ![GitHub repo size](https://img.shields.io/github/repo-size/jaymhorsh/currency-converter) 
