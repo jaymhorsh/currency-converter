@@ -16,6 +16,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useEffect } from "react";
 const Login = () => {
+  useEffect(() => {
+    document.title = "Register | Converter ";
+  }, []);
   const toast = useToast();
   const [load, setLoading] = useState(false);
   const [show, setShow] = React.useState(false);

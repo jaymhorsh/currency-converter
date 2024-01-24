@@ -18,6 +18,9 @@ import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 
 const Register = () => {
+  useEffect(() => {
+    document.title = "Login | Converter";
+  }, []);
   const toasted = useToast();
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(prevState=>!prevState);

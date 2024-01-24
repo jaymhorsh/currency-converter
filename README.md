@@ -3,7 +3,7 @@
 made by using React, React Query, Axios, NodeJs, Express and MongoDB
 
 
-![Screenshot from mobile view](https://user-images.githubusercontent.com/98729397/220971692-312de424-beeb-4d3c-b07c-526fd5eb9293.png)
+![Screenshot from mobile view](https://res.cloudinary.com/dbkthd6ck/image/upload/v1706092369/Screenshot_127_jvidfl.png)
 
 ## How to run the project?
 
