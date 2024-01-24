@@ -1,8 +1,14 @@
-# React + Vite
+# Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+made by using React, React Query, Axios, NodeJs, Express and MongoDB
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot from mobile view](https://user-images.githubusercontent.com/98729397/220971692-312de424-beeb-4d3c-b07c-526fd5eb9293.png)
+
+## How to run the project?
+
+1. grab your api key from [here](https://apilayer.com/marketplace/fixer-api)
+
+2. update `REACT_APP_API_KEY` in .env with your api key
+
+3. run the command => Run `npm install && npm run dev` on the folder and the backend path to install the dependencies and run both the backend and the frontend server.
