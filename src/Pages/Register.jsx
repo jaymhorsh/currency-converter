@@ -19,7 +19,7 @@ import { useToast } from "@chakra-ui/react";
 
 const Register = () => {
   useEffect(() => {
-    document.title = "Login | Converter";
+    document.title = "Register | Converter";
   }, []);
   const toasted = useToast();
   const [show, setShow] = useState(false);
