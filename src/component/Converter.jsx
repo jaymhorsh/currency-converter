@@ -101,11 +101,11 @@ const Converter = () => {
         >
           <ConverterDisplay
             amount={amount}
+            date={date}
+            time={time}
             currencyOne={currencyOne}
             currencyTwo={currencyTwo}
             convertedAmount={convertedAmount}
-            date={date}
-            time={time}
           />
         </GridItem>
       </Grid>
