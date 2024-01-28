@@ -39,7 +39,7 @@ const Register = () => {
   const postData = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await axios.post("https://convert-authapi.vercel.app/api/register", {
+      const response = await axios.post("http://localhost:3000/api/login", {
         fullName: sign.fullName.trim(),
         userName: sign.userName.trim(),
         email: sign.email.trim(),
