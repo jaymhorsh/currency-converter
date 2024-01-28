@@ -1,6 +1,7 @@
 import React from 'react'
 import { Flex } from '@chakra-ui/react'
 import Converter from '../component/Converter'
+import { useEffect } from 'react'
 const ConverterPage = () => {
   useEffect(() => {
     document.title = "Currency Converter";

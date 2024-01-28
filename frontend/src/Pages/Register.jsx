@@ -13,13 +13,11 @@ import {
 import { useNavigate, Link } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import axios from "axios";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import { useToast } from "@chakra-ui/react";
 
 const Register = () => {
   useEffect(() => {
-    document.title = "Login | Converter";
+    document.title = "Register | Converter";
   }, []);
   const toasted = useToast();
   const [show, setShow] = useState(false);
@@ -41,7 +39,7 @@ const Register = () => {
   const postData = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await axios.post("https://convert-authapi.vercel.app/api/register", {
+      const response = await axios.post("http://localhost:3000/api/login", {
         fullName: sign.fullName.trim(),
         userName: sign.userName.trim(),
         email: sign.email.trim(),
@@ -195,7 +193,7 @@ const Register = () => {
             fontWeight="500"
             textAlign="center"
           >
-            Register
+            Register 
           </Text>
 
           <form onSubmit={handleSubmit}>
@@ -283,14 +281,13 @@ const Register = () => {
                 color="white"
                 _hover={{ bgColor: "pink.400" }}
                 isLoading={load}
-                loadingText="Submitting"
+                loadingText="Submiting"
                 variant="outline"
               >
                 Submit
               </Button>
-
               <Text>
-                Already have an Account ?{" "}
+                Already have an Account ?
                 <Link to="/">
                   <span style={{ color: "blue" }}>Login Here</span>
                 </Link>
@@ -298,7 +295,7 @@ const Register = () => {
             </Stack>
           </form>
         </Box>
-      </Flex>{" "}
+      </Flex>
     </>
   );
 };
