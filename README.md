@@ -4,7 +4,7 @@
 
 ## Context
 
-This project was developed to demostrate the use of frontend technologies alongside backend technologies. It is a web application that essentially converts currencies of any kind to a desired currency using current/live rates.
+This project was developed to demonstrate the use of frontend technologies alongside backend technologies. It is a web application that essentially converts currencies of any kind to a desired currency using current/live rates.
 
 ## Pre-requisite
 
@@ -26,18 +26,32 @@ This project was made by using the following:
 - MongoDB
 
 ## How to run the project
+Local
+The following steps should be followed after installing the prerequisite to run the project locally:
+
+Create a .env file in both the frontend folder and the backend folder. For the backend folder, the env file would contain:
+
+MONGODB_URL=<Your-Personal-MONGODB_URL>
+JWT_SECRET=IwillNotMakeLastAttempt
+
+For the Frontend folder, the env file would contain:
+VITE_API_KEY=<Personal-VITE_API_KEY>
+
+run the command
+npm install && npm run dev
+
+This command has to be run in the terminal from the frontend folder and also on the backend folder to install the dependencies and run both the backend and the frontend server. The terminal will display the URLs for both your frontend server and backend server after running the commands.
 
 The following steps should be followed after installing the prerequisite:
+1. Generate a personal API key from [here](https://apilayer.com/marketplace/fixer-api)
 
-1. Generate a personal api key from [here](https://apilayer.com/marketplace/fixer-api)
-
-2. update `REACT_APP_API_KEY` in .env file with your api key
+2. update `REACT_APP_API_KEY` in the .env file with your API key
 
 3. run the command
 
    `npm install && npm run dev`
 
-this command has to be ran in the root folder and the backend folder to install the dependencies and run both the backend and the frontend server.
+this command has to be run in the root folder and the backend folder to install the dependencies and run both the backend and the frontend server.
 
 ## Links
 
@@ -58,3 +72,9 @@ Web: [Currency-Converter](https://currency-converts.vercel.app)
 [Jaji Moshood](https://github.com/jaymhorsh)
 
 ![Contributors](https://img.shields.io/github/contributors/jaymhorsh/currency-converter?logoColor=green&style=plastic) ![GitHub repo size](https://img.shields.io/github/repo-size/jaymhorsh/currency-converter)
+
+
+
+
+
+
