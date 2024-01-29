@@ -4,7 +4,7 @@
 
 ## Context
 
-This project was developed to demostrate the use of frontend technologies alongside backend technologies. It is a web application that essentially converts currencies of any kind to a desired currency using current/live rates.
+This project was developed to demonstrate the use of frontend technologies alongside backend technologies. It is a web application that essentially converts currencies of any kind to a desired currency using current/live rates.
 
 ## Pre-requisite
 
@@ -13,11 +13,11 @@ In other to successfully run this program the following should be installed:
 - [NodeJs](https://nodejs.org/en/download)
 - [Docker-Desktop](https://docs.docker.com/desktop/)
 
-Create the neccessary environmental variables:
+Create the necessary environmental variables:
 
-- Generate your personal Mongodb connection string [Mongodb](https://www.mongodb.com/docs/guides/atlas/account/)
+- Generate your personal MongoDB connection string [Mongodb](https://www.mongodb.com/docs/guides/atlas/account/)
 
-- Generate a personal api key from [here](https://apilayer.com/marketplace/fixer-api)
+- Generate a personal API key from [here](https://apilayer.com/marketplace/fixer-api)
 
 ## Technologies
 
@@ -32,7 +32,7 @@ This project was made by using the following technologies:
 - Docker
 
 ## How to run the project
-This project can be ran locally and can also be ran on docker.
+This project can be run locally and can also be run on docker.
 
 ## Local 
 The following steps should be followed after installing the prerequisite to run the project locally:
@@ -49,11 +49,11 @@ The following steps should be followed after installing the prerequisite to run 
 
    `npm install && npm run dev`
 
-This command has to be ran in the terminal from the frontend folder and also on the backend folder to install the dependencies and run both the backend and the frontend server.
+This command has to be run in the terminal from the frontend folder and also on the backend folder to install the dependencies and run both the backend and the frontend server.
 The terminal will display the URLs for both your frontend server and backend server after running the commands.
 
 ## Docker
-This doesn't need you installing NodeJs or any dependencies on your machine. All dependencies would be installed on the docker container. To successfully run this project on docker the following steps should be taken:
+This doesn't need you to install NodeJs or any dependencies on your machine. All dependencies would be installed on the docker container. To successfully run this project on docker the following steps should be taken:
 
 1. Install and run docker desktop on your machine, to use docker technology
 
@@ -65,7 +65,7 @@ This doesn't need you installing NodeJs or any dependencies on your machine. All
 
     `docker-compose up`
 
-    This would build the project on a Node container and the docker-compose file will simultanously run both servers and display their urls on the terminal.
+    This would build the project on a Node container and the docker-compose file will simultaneously run both servers and display their URLs on the terminal.
 
 ## Links
 
